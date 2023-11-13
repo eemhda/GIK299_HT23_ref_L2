@@ -67,14 +67,12 @@
                 switch (menuSelector)
                 {
                     case 1:
-                        Console.WriteLine("Hur många husdjur har du?"); //ber användaren att ange hur många husdjur hen har
-                        int userInputNumberOfPets = Int32.Parse(Console.ReadLine()); //sparar användarens svar i en variabel
-                        string[] pets = new string[userInputNumberOfPets]; //anger att vi ska ska upp en ny array av typen sträng, i hakparenteserna skickar vi med
-                                                                           //antalet platser som vi vill att arrayen ska ha och här använder vi det värde
-                                                                           //som vi nyss fick från använaren och som vi sparade i userInputNumberOfPets.
+                        string[] pets = new string[5]; //anger att vi ska ska upp en ny array av typen sträng, i hakparenteserna skickar vi med
+                                                       //antalet platser som vi vill att arrayen ska ha.
 
+                        Console.WriteLine("Ange namnen på fem husdjur?"); //ber användaren att ange namnet på fem husdjur
 
-                        //här använder jag en for-loops för att gå igenom arrayen och lägga till djuren som användaren skriver in
+                        //här använder jag en for-loop för att gå igenom arrayen och lägga till djuren som användaren skriver in
                         //en for-loop består av en räknare, ett villkor och en räknare som ökar eller minskar räknaren.
                         for (int i = 0; i < pets.Length; i++)
                         {
@@ -116,7 +114,7 @@
                     //Ett exempel när vi dock INTE gör det är när vi använder Console-klassen, det beror på att Console-klassen är en så kallad statisk klass vilket innebär att vi inte 
                     //kan instansiera den utan vi får helt enkelt skriva klassnamnet följt av punkt för att komma åt metoderna som finns där.
                     //För Randomklassen så fungerar det lite annorlunda. Då skapar vi upp ett objekt av klassen Random. Och det gör vi genom att skriva på det här sättet.
-                    //Det finns lite olika sätt man kan skriva på numer men det här är en ganska ursprunglig och grundläggande 
+                    //Det finns lite olika sätt man kan skriva på numer men det här är en ganska ursprunglig och grundläggande variant att instansiera ett objekt. 
                     //Sen ska vi skapa upp en array av typen int. Eftersom vi ska skapa en lottorad så bestämmer vi i förväg att den ska ha 7 index.
                     case 2:
                         Random random = new Random(); //Skapar upp en instans av klassen Random som vi kan använda för att slumpa fram tal
